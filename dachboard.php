@@ -1,5 +1,7 @@
 <?php include 'parts/header.php'?>
 <?php include 'MySql/connt.php'?>
+<?php include 'MySql/deletepodcast.php'?>
+
           <div class ="list-group list-group-flush my-3">
             <a href="dachboard.php" class="list-group-item list-group-item-action bg-transparent second-text active">
             <i class="fas fa-tachometer-alt me-2"></i> dashboard

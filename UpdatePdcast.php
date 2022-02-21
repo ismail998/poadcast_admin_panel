@@ -6,17 +6,17 @@ $row=mysqli_fetch_array($resulte);
 ?>
 <?php 
   if (isset($_POST['submit3'])) {
-    $name = $_POST['name_podcast'];
-    $image = $_POST['image'];
-    $url_podcast = $_POST['url_podcast'];
-    $speaker = $_POST['speaker'];
-    $catygory=$_POST['catygory'];
-    if (empty($name) || empty($image) || empty($url_podcast) ||empty($speaker) ) {
+    $name1 = $_POST['name_podcast'];
+    $image1 = $_POST['image'];
+    $url_podcast1 = $_POST['url_podcast'];
+    $speaker1 = $_POST['speaker'];
+    $catygory1=$_POST['catygory'];
+    if (empty($name1) || empty($image1) || empty($url_podcast1) ||empty($speaker1) ) {
         echo '<br>error';
     }else{ 
-        $sql_update=" UPDATE podcast SET name = '".$name."'
-        , url_img ='".$image."'
-       , url_podcast = '".$url_podcast."' , speaker = '".$speaker."' WHERE podcast.id_podcast = ".$_GET['id']."";
+        $sql_update=" UPDATE podcast SET name = '".$name1."'
+        , url_img ='".$image1."'
+       , url_podcast = '".$url_podcast1."' , speaker = '".$speaker1."' WHERE podcast.id_podcast = ".$_GET['id']."";
         mysqli_query($conn,$sql_update);
     }
   }
@@ -41,7 +41,7 @@ $row=mysqli_fetch_array($resulte);
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
                 <div class="d-flex align-items-center">
                   
-                    <h2 class="fs-2 m-0">UPdate Posdcast</h2>
+                <i class="fas fa-arrow-alt-circle-left me-2 "></i><h2 class="fs-2 m-0">UPdate Posdcast</h2>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -94,7 +94,12 @@ $row=mysqli_fetch_array($resulte);
              <div class="mb-3">
              <?php include 'MySql/catygory_sql.php'?>
              </div>
-             <input type ="submit" name ="submit3" value = save class ="btn btn-primary">
+             <div class="position-absolute  start-50 translate-middle">
+             <input type ="submit" name ="submit3" value = "UPDATE" class ="btn btn-primary"> 
+             <a class="btn btn-primary" href="dachboard.php" role="button">Go to dashboard</a>
+             </div>
+             
+
        </form>     
     </div>
     </div>

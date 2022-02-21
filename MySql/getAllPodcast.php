@@ -14,9 +14,8 @@ foreach ($data_book as $book) {
    <td><a href="'.$book['url_podcast'].'">Link</a>
    </td>
    <td><a class="btn btn-primary" href="UpdatePdcast.php?id='. $book['id_podcast'].'" role="button">EDIT</a></td>
-   <td><button type="button" class="btn btn-danger">Update</button></td>
+   <td><a class="btn btn-primary" href="dachboard.php?delete='. $book['id_podcast'].'"role="button">delete</a></td>
  </tr>';
-
 }
 echo '</tbody>
 </table>';
