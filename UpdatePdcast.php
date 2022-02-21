@@ -1,11 +1,11 @@
 <?php
  include 'MySql/connt.php';
  $sql_podcast_update="SELECT * FROM podcast WHERE id_podcast = ".$_GET['id']."";
- $resulte =mysqli_query($conn,$sql_podcast_update);
- $row=mysqli_fetch_array($resulte);
+$resulte =mysqli_query($conn,$sql_podcast_update);
+$row=mysqli_fetch_array($resulte);
 ?>
 <?php 
-  if (isset($_POST['submit'])) {
+  if (isset($_POST['submit3'])) {
     $name = $_POST['name_podcast'];
     $image = $_POST['image'];
     $url_podcast = $_POST['url_podcast'];
@@ -14,17 +14,12 @@
     if (empty($name) || empty($image) || empty($url_podcast) ||empty($speaker) ) {
         echo '<br>error';
     }else{ 
-        $sql_update=" UPDATE podcast SET name = 'serthtr' WHERE id_podcast  =".$_GET['id']."";
-        $d =mysqli_query($conn,$sql_update);
-       if ($d) {
-         # code...
-         echo "<script>alter('update')</script>";
-       }else{
-        echo "<script>alter('error')</script>";
-       }
+        $sql_update=" UPDATE podcast SET name = '".$name."'
+        , url_img ='".$image."'
+       , url_podcast = '".$url_podcast."' , speaker = '".$speaker."' WHERE podcast.id_podcast = ".$_GET['id']."";
+        mysqli_query($conn,$sql_update);
     }
   }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,7 +65,7 @@
                 </div>
             </nav>
             <div class="container-fluid px-12">
-            <form action="add_podcast.php" method="POST">
+            <form action="" method="POST">
              <div class="mb-3">
                <label for="exampleInputEmail1" class="form-label">Name Podcast</label>
                <input type="text" name="name_podcast" 
@@ -99,7 +94,7 @@
              <div class="mb-3">
              <?php include 'MySql/catygory_sql.php'?>
              </div>
-             <input type ="submit" name ="submit" value = save class ="btn btn-primary">
+             <input type ="submit" name ="submit3" value = save class ="btn btn-primary">
        </form>     
     </div>
     </div>
