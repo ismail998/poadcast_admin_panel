@@ -54,7 +54,7 @@
                 </div>
             </nav>
             <div class="container-fluid px-4">
-            <form action="add_podcast.php" method="POST">
+            <form action="dachboard.php" method="POST">
              <div class="mb-3">
                <label for="exampleInputEmail1" class="form-label">Name Podcast</label>
                <input type="text" name="name_podcast" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -80,17 +80,7 @@
              </div>
              <input type ="submit" name ="submit" value = save class ="btn btn-primary">
        </form>
-       <div class=" mt-3  ">
-       <h2 class="fs-2 m-0 ">Add new catygory</h2>
-       <form action="add_podcast.php" method="POST">
-             <div class="mb-3">
-               <label for="exampleInputEmail1" class="form-label">catygory name</label>
-               <input type="text" name="name_catygory" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-               <div id="emailHelp" class="form-text"></div>
-             </div>
-             <input type ="submit" name ="submit2" value = save class ="btn btn-primary">
-       </form>
-       </div>
+       
             </div>
     </div>
  <?php include 'parts/fin.php'?>

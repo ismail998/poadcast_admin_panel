@@ -54,7 +54,7 @@
                 </div>
             </nav>
             <div class="container-fluid px-4">
-            <form action="add_Book.php" method="POST">
+            <form action="dachboard.php" method="POST">
              <div class="mb-3">
                <label for="exampleInputEmail1" class="form-label">Name Book</label>
                <input type="text" name="name_book" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
