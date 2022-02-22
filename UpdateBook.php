@@ -1,27 +1,5 @@
-<?php
- include 'MySql/connt.php';
- $sql_podcast_update="SELECT * FROM podcast WHERE id_podcast = ".$_GET['id']."";
-$resulte =mysqli_query($conn,$sql_podcast_update);
-$row=mysqli_fetch_array($resulte);
-?>
 <?php 
-  if (isset($_POST['submit3'])) {
-    $name1 = $_POST['name_podcast'];
-    $image1 = $_POST['image'];
-    $url_podcast1 = $_POST['url_podcast'];
-    $speaker1 = $_POST['speaker'];
-    $catygory1=$_POST['catygory'];
-    if (empty($name1) || empty($image1) || empty($url_podcast1) ||empty($speaker1) ) {
-        echo '<br>error';
-    }else{ 
-        $sql_update=" UPDATE podcast SET name = '".$name1."'
-        , url_img ='".$image1."'
-       , url_podcast = '".$url_podcast1."' , speaker = '".$speaker1."' WHERE podcast.id_podcast = ".$_GET['id']."";
-        mysqli_query($conn,$sql_update);
-        header("Location: dachboard.php");
-        exit();
-    }
-  }
+ include 'MySql/book_update.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,7 +21,7 @@ $row=mysqli_fetch_array($resulte);
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
                 <div class="d-flex align-items-center">
                   
-                <i class="fas fa-arrow-alt-circle-left me-2 "></i><h2 class="fs-2 m-0">UPdate Posdcast</h2>
+                <i class="fas fa-arrow-alt-circle-left me-2 "></i><h2 class="fs-2 m-0">UpDate Book</h2>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -69,40 +47,43 @@ $row=mysqli_fetch_array($resulte);
             <div class="container-fluid px-12">
             <form action="" method="POST">
              <div class="mb-3">
-               <label for="exampleInputEmail1" class="form-label">Name Podcast</label>
-               <input type="text" name="name_podcast" 
+               <label for="exampleInputEmail1" class="form-label">Name book</label>
+               <input type="text" name="name_book" 
                value ="<?php echo $row['name'] ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                <div id="emailHelp" class="form-text"></div>
              </div>
              <div class="mb-3">
-               <label for="exampleInputEmail1" class="form-label">url image</label>
-               <input type="url" name ="image"
-               class="form-control" value ="<?php echo $row['url_img'] ?>"
+               <label for="exampleInputEmail1" class="form-label">URL PDF</label>
+               <input type="url" name ="pdf"
+               class="form-control" value ="<?php echo $row['pdf'] ?>"
                 id="exampleInputEmail1" aria-describedby="emailHelp">
                <div id="emailHelp" class="form-text"></div>
              </div>
              <div class="mb-3">
-               <label for="exampleInputEmail1" class="form-label">url podcast</label>
-               <input type="url" name ="url_podcast" value ="<?php echo $row['url_podcast'] ?>"
+               <label for="exampleInputEmail1" class="form-label">url audio</label>
+               <input type="url" name ="url_audio" value ="<?php echo $row['audio'] ?>"
                class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                <div id="emailHelp" class="form-text"></div>
              </div>
              <div class="mb-3">
-               <label for="exampleInputEmail1" class="form-label">speaker</label>
-               <input type="text" name="speaker" class="form-control"
-               value ="<?php echo $row['speaker'] ?>" id="exampleInputEmail1" aria-describedby="emailHelp">
+               <label for="exampleInputEmail1" class="form-label">writer</label>
+               <input type="text" name="writer" class="form-control"
+               value ="<?php echo $row['writer'] ?>" id="exampleInputEmail1" aria-describedby="emailHelp">
+               <div id="emailHelp" class="form-text"></div>
+             </div>
+             <div class="mb-3">
+               <label for="exampleInputEmail1" class="form-label">url image</label>
+               <input type="text" name="img" class="form-control"
+               value ="<?php echo $row['img'] ?>" id="exampleInputEmail1" aria-describedby="emailHelp">
                <div id="emailHelp" class="form-text"></div>
              </div>
              <div class="mb-3">
              <?php include 'MySql/catygory_sql.php'?>
              </div>
              <div class="position-absolute  start-50 translate-middle">
-             <input type ="submit" name ="submit3" value = "UPDATE" class ="btn btn-primary"> 
+             <input type ="submit" name ="submit_b" value = "UPDATE" class ="btn btn-primary"> 
              <a class="btn btn-primary" href="dachboard.php" role="button">Go to dashboard</a>
              </div>
        </form>     
     </div>
     </div>
-
-
-<?php include 'parts/fin.php'?>
