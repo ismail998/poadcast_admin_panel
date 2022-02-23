@@ -1,7 +1,6 @@
 <?php 
      session_start();
        $id = $_SESSION["id"];
-       
        $sqluser = "SELECT * FROM admin_user WHERE id_admin  =". $id;
       $query_user =mysqli_query($conn,$sqluser);
        $user_info=mysqli_fetch_all($query_user,MYSQLI_ASSOC);

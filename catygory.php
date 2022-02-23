@@ -46,7 +46,7 @@
                                 <i class="fas fa-user me-2"></i><?php echo $name_user ?>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="Settings.php">Settings</a></li>
                                 <li><a class="dropdown-item" href="#">Logout</a></li>
                             </ul>
                         </li>

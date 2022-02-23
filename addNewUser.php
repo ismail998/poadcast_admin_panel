@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
                 <div class="d-flex align-items-center">
                     <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
-                    <h2 class="fs-2 m-0">Add new admin</h2>
+                    <h2 class="fs-2 m-0">Settings</h2>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <i class="fas fa-user me-2"></i><?php echo $name_user ?>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="Settings.php">Settings</a></li>
                                 <li><a class="dropdown-item" href="#">Logout</a></li>
                             </ul>
                         </li>
@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <form action="" method="POST">
              <div class="mb-3">
                <label for="exampleInputEmail1" class="form-label">Full name</label>
-               <input type="text" name="F_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+               <input type="text" name="F_name"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                <div id="emailHelp" class="form-text"></div>
              </div>
              <div class="mb-3">
