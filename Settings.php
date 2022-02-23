@@ -23,7 +23,7 @@
             <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
             <i class="fas fa-link me-2"></i> Api
             </a>
-            <a href="#" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold">
+            <a href="logout.php" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold">
             <i class="fas fa-sign-out-alt me-2"></i>log out
             </a>
           </div>
@@ -49,7 +49,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="Settings.php">Settings</a></li>
-                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                                <li><a class="dropdown-item" href="logout.php">Logout</a></li>
                             </ul>
                         </li>
                     </ul>

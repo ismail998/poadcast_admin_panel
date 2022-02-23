@@ -7,7 +7,7 @@ if (isset($_POST['submit21'])) {
     if (empty($name_f) || empty($email) || empty($pass) ||empty($username) ) {
         echo '<br>error';
     }else{ 
-        echo 'hi';
+        
         $sql_update=" UPDATE admin_user SET first_last_name = '".$name_f."'
         , user_name ='".$username."'
        , password = '".$pass."' , Email = '".$email."'
