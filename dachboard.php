@@ -15,7 +15,7 @@
             <a href="catygory.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
             <i class="fas fa-align-justify me-2"></i>Add Catygory
             </a>
-            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+            <a href="addNewUser.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
             <i class="fas fa-user me-2"></i>Add new user
             </a>
             <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
@@ -46,7 +46,6 @@
                                 <i class="fas fa-user me-2"></i><?php echo $name_user ?>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Profile</a></li>
                                 <li><a class="dropdown-item" href="#">Settings</a></li>
                                 <li><a class="dropdown-item" href="#">Logout</a></li>
                             </ul>

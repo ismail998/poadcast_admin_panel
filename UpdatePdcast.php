@@ -1,5 +1,7 @@
 <?php
  include 'MySql/connt.php';
+ include 'MySql/getuser.php';
+
  $sql_podcast_update="SELECT * FROM podcast WHERE id_podcast = ".$_GET['id']."";
 $resulte =mysqli_query($conn,$sql_podcast_update);
 $row=mysqli_fetch_array($resulte);
@@ -55,10 +57,9 @@ $row=mysqli_fetch_array($resulte);
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-user me-2"></i>John Doe
+                                <i class="fas fa-user me-2"></i><?php echo $name_user ?>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Profile</a></li>
                                 <li><a class="dropdown-item" href="#">Settings</a></li>
                                 <li><a class="dropdown-item" href="#">Logout</a></li>
                             </ul>
