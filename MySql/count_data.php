@@ -8,6 +8,10 @@ $data2=mysqli_fetch_assoc($num_catygory);
 $sql_count_book ="SELECT COUNT(*) as CB FROM book";
 $num_book=mysqli_query($conn,$sql_count_book);
 $data3=mysqli_fetch_assoc($num_book);
+//-------------------count user----------------//
+$sql_c ="SELECT * FROM admin_user";
+$result_c= mysqli_query($conn, $sql_c);
+$rowcount=mysqli_num_rows($result_c);
 ?>
 <?php 
 echo '<div class =col-md-3>
@@ -34,7 +38,7 @@ echo '<div class =col-md-3>
                   <div class="card-body">
                   <h5 class="card-title text-center">
                   <i class="fas fa-user me-2"></i>User</h5>
-                    <h3 class ="text-center">73</h3>
+                    <h3 class ="text-center">'.$rowcount.'</h3>
                     </div>
                  </div>
               </div>
