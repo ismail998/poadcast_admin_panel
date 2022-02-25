@@ -2,7 +2,7 @@
 <?php include 'MySql/connt.php'?>
 <?php include 'MySql/deletepodcast.php'?>
 <?php include 'MySql/getuser.php'?>
-          <div class ="list-group list-group-flush my-3">
+          <div class ="list-group list-group-flush my-3" id ="side_bar">
             <a href="dachboard.php" class="list-group-item list-group-item-action bg-transparent second-text active">
             <i class="fas fa-tachometer-alt me-2"></i> dashboard
             </a>
@@ -18,7 +18,7 @@
             <a href="addNewUser.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
             <i class="fas fa-user me-2"></i>Add new user
             </a>
-            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+            <a href="api.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
             <i class="fas fa-link me-2"></i> Api
             </a>
             <a href="logout.php" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold">
@@ -30,7 +30,9 @@
     <div id="page-content-wrapper">
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
                 <div class="d-flex align-items-center">
-                    <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
+                <a onclick="tog()">
+                 <i class="fas fa-align-left primary-text fs-4 me-3"  id="menu-toggle" ></i>
+                </a>
                     <h2 class="fs-2 m-0">Dashboard</h2>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"

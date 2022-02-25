@@ -7,7 +7,9 @@ if (isset($_POST['submit'])) {
     $Writer = $_POST['Writer'];
     $catygory=$_POST['catygory'];
     if (empty($name) || empty($image) || empty($url_pdf) ||empty($Writer) ) {
-        echo '<br>error';
+         echo'<div class="alert alert-danger" role="alert">
+             One of the fields is empty !!
+              </div>';
     }else{
         $sql_insert="INSERT INTO book(name,pdf,audio,img,writer,id_caty)
      VALUES ('$name','$url_pdf','$url_audio','$image','$Writer',$catygory)";

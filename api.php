@@ -2,10 +2,10 @@
 <?php include 'MySql/connt.php'?>
 <?php include 'MySql/getuser.php'?>
 <div class ="list-group list-group-flush my-3">
-<a href="dachboard.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+            <a href="dachboard.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
             <i class="fas fa-tachometer-alt me-2"></i> dashboard
             </a>
-            <a href="add_Podcast.php" class="list-group-item list-group-item-action bg-transparent second-text active">
+            <a href="add_Podcast.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
             <i class="fas fa-microphone me-2"></i>Add Podcast
             </a>
             <a href="add_Book.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
@@ -17,7 +17,7 @@
             <a href="addNewUser.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
             <i class="fas fa-user me-2"></i>Add new user
             </a>
-            <a href="api.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+            <a href="api.php" class="list-group-item list-group-item-action bg-transparent second-text active">
             <i class="fas fa-link me-2"></i> Api
             </a>
             <a href="logout.php" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold">
@@ -30,7 +30,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
                 <div class="d-flex align-items-center">
                     <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
-                    <h2 class="fs-2 m-0">Add new Posdcast</h2>
+                    <h2 class="fs-2 m-0">Link API</h2>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -53,35 +53,28 @@
                 </div>
             </nav>
             <div class="container-fluid px-4">
-            <form action="" method="POST">
+         
              <div class="mb-3">
-               <label for="exampleInputEmail1" class="form-label">Name Podcast</label>
-               <input type="text" name="name_podcast" class="form-control" placeholder="Name Podcast" id="exampleInputEmail1" aria-describedby="emailHelp">
-               <div id="emailHelp" class="form-text"></div>
+             <p class="fs-3">link for get all book</p>
+             <a href="API/getallbook.php">your_domain_name/API/getallbook.php</a>
              </div>
              <div class="mb-3">
-               <label for="exampleInputEmail1" class="form-label">url image</label>
-               <input type="url" name ="image"class="form-control" id="exampleInputEmail1" 
-               placeholder="url image" aria-describedby="emailHelp">
-               <div id="emailHelp" class="form-text"></div>
+             <p class="fs-3">link for get all podcast</p>
+             <a href="API/getallbook.php">your_domain_name/API/getallpodcast.php</a>
              </div>
              <div class="mb-3">
-               <label for="exampleInputEmail1" class="form-label">url podcast</label>
-               <input type="url" placeholder="url podcast" name ="url_podcast" class="form-control" >
-               <div id="emailHelp" class="form-text"></div>
+             <p class="fs-3">link for get all catygory</p>
+             <a href="API/getallcatygory.php">your_domain_name/API/getallcatygory.php</a>
              </div>
              <div class="mb-3">
-               <label for="exampleInputEmail1" class="form-label">speaker</label>
-               <input type="text" name="speaker" class="form-control"
-                placeholder="speaker" aria-describedby="emailHelp">
-               <div id="emailHelp" class="form-text"></div>
+             <p class="fs-3">link for search book </p>
+             <a href="">your_domain_name/API/getallcatygory.php?key_search=your_word</a>
              </div>
              <div class="mb-3">
-             <?php include 'MySql/catygory_sql.php'?>
+             <p class="fs-3">link for search book </p>
+             <a href="">your_domain_name/API/getallcatygory.php?key_search=your_word</a>
              </div>
-             <input type ="submit" name ="submit" value = save class ="btn btn-primary">
-       </form>
+             </div>      
             </div>
-            <?php include 'MySql/insert_podcast.php'?>
     </div>
  <?php include 'parts/fin.php'?>

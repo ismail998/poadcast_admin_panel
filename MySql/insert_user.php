@@ -6,7 +6,9 @@ if (isset($_POST['submit20'])) {
     $pass = $_POST['password'];
     echo $F_name ." :".$email;
     if (empty($F_name) || empty($email) || empty($username) ||empty($pass) ) {
-        echo '<br>error';
+        echo'<div class="alert alert-danger" role="alert">
+        One of the fields is empty !!
+         </div>';
     }else{
         $sql_ins_user="INSERT INTO admin_user(first_last_name,user_name,password,Email)
      VALUES ('".$F_name."','".$username."','".$pass."','".$email."')";

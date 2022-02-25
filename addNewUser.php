@@ -1,6 +1,5 @@
 <?php include 'parts/header.php'?>
 <?php include 'MySql/connt.php'?>
-<?php include 'MySql/insert_user.php'?>
 <?php include 'MySql/getuser.php'?>
 <?php
 if (!isset($_SESSION)) {
@@ -29,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <a href="addNewUser.php" class="list-group-item list-group-item-action bg-transparent second-text active">
             <i class="fas fa-user me-2"></i>Add new user
             </a>
-            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+            <a href="api.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
             <i class="fas fa-link me-2"></i> Api
             </a>
             <a href="logout.php" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold">
@@ -67,27 +66,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="container-fluid px-4">
             <form action="" method="POST">
              <div class="mb-3">
-               <label for="exampleInputEmail1" class="form-label">Full name</label>
-               <input type="text" name="F_name"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+               <label  class="form-label">Full name</label>
+               <input type="text" name="F_name"  placeholder="Full name" class="form-control" >
                <div id="emailHelp" class="form-text"></div>
              </div>
              <div class="mb-3">
-               <label for="exampleInputEmail1" class="form-label">UserName</label>
-               <input type="text" name ="Username"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+               <label class="form-label">User Name</label>
+               <input type="text" name ="Username"class="form-control" placeholder="UserName" >
                <div id="emailHelp" class="form-text"></div>
              </div>
              <div class="mb-3">
                <label for="exampleInputEmail1" class="form-label">Email</label>
-               <input type="email" name ="email"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+               <input type="email" name ="email"class="form-control" placeholder="Email" id="exampleInputEmail1" aria-describedby="emailHelp">
                <div id="emailHelp" class="form-text"></div>
              </div>
              <div class="mb-3">
-               <label for="exampleInputEmail1" class="form-label">Password</label>
-               <input type="password" name ="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+               <label  class="form-label">Password</label>
+               <input type="password" name ="password" class="form-control" placeholder="Password" id="exampleInputEmail1" aria-describedby="emailHelp">
                <div id="emailHelp" class="form-text"></div>
              </div>
              <input type ="submit" name ="submit20" value = "save" class ="btn btn-primary">
        </form>
+       <?php include 'MySql/insert_user.php'?>
             </div>
     </div>
  <?php include 'parts/fin.php'?>

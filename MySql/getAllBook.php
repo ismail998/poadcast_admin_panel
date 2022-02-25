@@ -14,8 +14,8 @@ foreach ($books as $book) {
    <td><a href="'.$book['pdf'].'">Link</a>
    <td><a href="'.$book['audio'].'">Link</a>
    </td>
-   <td><a class="btn btn-primary" href="UpdateBook.php?id='. $book['id_book'].'" role="button">EDIT</a></td>
-   <td><a class="btn btn-primary" href="dachboard.php?delete_book='. $book['id_book'].'"role="button">delete</a></td>
+   <td><a class="btn btn-warning" href="UpdateBook.php?id='. $book['id_book'].'" role="button">EDIT</a></td>
+   <td><a class="btn btn-danger" href="dachboard.php?delete_book='. $book['id_book'].'"role="button">delete</a></td>
  </tr>';
 }
 echo '</tbody>

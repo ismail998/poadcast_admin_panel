@@ -20,7 +20,7 @@
             <a href="addNewUser.php" class="list-group-item list-group-item-action bg-transparent second-text active">
             <i class="fas fa-user me-2"></i>Add new user
             </a>
-            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+            <a href="api.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
             <i class="fas fa-link me-2"></i> Api
             </a>
             <a href="logout.php" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold">

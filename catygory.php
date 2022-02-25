@@ -1,7 +1,6 @@
 <?php include 'parts/header.php'?>
 <?php include 'MySql/connt.php'?>
 <?php include 'MySql/getuser.php'?>
-<?php include 'MySql/insert_catygory.php'?>
 <div class ="list-group list-group-flush my-3">
             <a href="dachboard.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
             <i class="fas fa-tachometer-alt me-2"></i> dashboard
@@ -18,7 +17,7 @@
             <a href="addNewUser.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
             <i class="fas fa-user me-2"></i>Add new user
             </a>
-            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+            <a href="api.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
             <i class="fas fa-link me-2"></i> Api
             </a>
             <a href="logout.php" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold">
@@ -54,14 +53,15 @@
                 </div>
             </nav>
             <div class="container-fluid px-4">          
-        <form action="catygory.php" method="POST">
+        <form action="" method="POST">
              <div class="mb-3">
                <label for="exampleInputEmail1" class="form-label">catygory name</label>
-               <input type="text" name="name_catygory" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+               <input type="text" name="name_catygory" class="form-control" placeholder="catygory name" id="exampleInputEmail1" aria-describedby="emailHelp">
                <div id="emailHelp" class="form-text"></div>
              </div>
              <input type ="submit" name ="submit2" value = save class ="btn btn-primary">
        </form>
             </div>
+            <?php include 'MySql/insert_catygory.php'?>           
     </div>
  <?php include 'parts/fin.php'?>
