@@ -27,7 +27,7 @@ In this project I tried to build a control panel for an Android app using php & 
  ✅ The project is based on bootstrap 
 ## Some pictures from inside the site
 
-![](https://github.com/ismail998/poadcast_admin_panel/blob/master/secren_shot/dashe.png)
+![](https://github.com/ismail998/poadcast_admin_panel/blob/master/secren_shot/dashe.PNG)
 ![](https://github.com/ismail998/poadcast_admin_panel/blob/master/secren_shot/api2.PNG)
 ![](https://github.com/ismail998/poadcast_admin_panel/blob/master/secren_shot/login.PNG)
 ## Contributing
