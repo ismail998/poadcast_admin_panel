@@ -1,4 +1,4 @@
-# poadcast_admin_panel
+
 # Podcast admin panel php & mysql
 
 In this project I tried to build a control panel for an Android app using php & mysql
